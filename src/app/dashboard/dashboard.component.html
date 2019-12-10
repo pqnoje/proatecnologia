@@ -1,0 +1,29 @@
+<div class="card-panel teal">
+    <h1 class="white-text">{{totalCharacters}} personagens</h1>
+</div>
+
+<div>
+    <canvas id="topFiveCharacters"></canvas>
+</div>
+
+<h2>Lista de todos os personagens</h2>
+<div>
+    <table datatable datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Quadrinhos</th>
+                <th>Eventos</th>
+                <th>Histórias</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let character of characters">
+                <td>{{character.name}}</td>
+                <td>{{character.comics.available}}</td>
+                <td>{{character.events.available}}</td>
+                <td>{{character.stories.available}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

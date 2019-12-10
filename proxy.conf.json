@@ -1,0 +1,8 @@
+{
+    "/v1/public/*": {
+        "target": "https://gateway.marvel.com",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}
