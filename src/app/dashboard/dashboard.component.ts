@@ -17,11 +17,13 @@ export class DashboardComponent implements OnInit, OnDestroy {
   public totalCharacters: number
   public dtOptions: DataTables.Settings = {}
   public dtTrigger: Subject<any>
+  public isLoading: boolean
 
   constructor(private characterService: CharacterService) {
     this.characters = new Array<Character>()
     this.dtTrigger = new Subject()
     this.dtOptions = {}
+    this.isLoading = true
   }
 
   ngOnInit() {
@@ -56,12 +58,12 @@ export class DashboardComponent implements OnInit, OnDestroy {
   }
 
   getTopFiveCharacters() {
-    let nativeEl = document.getElementById('topFiveCharacters') as HTMLCanvasElement
-
     this.characterService.getTopFiveCharacters().subscribe(
       topFiveCharacters => {
+        this.isLoading = false
         let characterLabels = topFiveCharacters.map(character => character.name)
         let characterAvailables = topFiveCharacters.map(character => character.comics.available)
+        let nativeEl = document.getElementById('topFiveCharacters') as HTMLCanvasElement
 
         new Chart(nativeEl, {
           type: 'bar',

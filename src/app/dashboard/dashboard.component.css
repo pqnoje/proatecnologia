@@ -1,0 +1,11 @@
+.big-number p:nth-child(1) {
+    color: white;
+    font-size: 140px;
+    text-align: center;
+}
+
+.big-number p:nth-child(2) {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
