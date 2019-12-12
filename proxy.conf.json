@@ -1,6 +1,6 @@
 {
-    "/v1/public/*": {
-        "target": "https://gateway.marvel.com",
+    "/api/v1/*": {
+        "target": "https://quiet-stream-06037.herokuapp.com/",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"

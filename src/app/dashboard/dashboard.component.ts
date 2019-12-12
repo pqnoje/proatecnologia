@@ -28,13 +28,13 @@ export class DashboardComponent implements OnInit, OnDestroy {
     this.getTotal()
     this.getAllCharacters()
     this.getTopFiveCharacters()
-     this.dtOptions = {
+    this.dtOptions = {
       pagingType: 'full_numbers',
       pageLength: 100
     }
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.dtTrigger.unsubscribe()
   }
 
