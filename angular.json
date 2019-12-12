@@ -70,7 +70,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "marvel-dashboard:build",
-            "proxyConfig": "./proxy.conf.json"
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -127,6 +127,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "marvel-dashboard"
 }
