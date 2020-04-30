@@ -25,7 +25,7 @@
     "datatables.net": "^1.10.20",
     "datatables.net-dt": "^1.10.20",
     "express": "^4.17.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.15",
     "materialize-css": "^1.0.0",
     "md5-typescript": "^1.0.5",
